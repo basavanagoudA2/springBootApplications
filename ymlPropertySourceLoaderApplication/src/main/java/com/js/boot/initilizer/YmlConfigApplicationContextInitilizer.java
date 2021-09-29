@@ -18,6 +18,7 @@ public class YmlConfigApplicationContextInitilizer implements ApplicationContext
 		// get the enviroment object from ioc and load propertysource obj
 		ConfigurableEnvironment configurableEnvironment=null;		
 		List<PropertySource<?>> propertySources=null;
+		//YmalPropertySourceLoader meant for just convert the yml to source object
 		propertySourceLoader=new YamlPropertySourceLoader();
 		try {
 			propertySources=propertySourceLoader.load("config", applicationContext.getResource("classpath:app-global-ymlConfig.yml"));
